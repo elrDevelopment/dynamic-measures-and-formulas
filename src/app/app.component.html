@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h1>Reactive Dynamic Form Example</h1>
+  <hr/>
+
+  <div class="row">
+    <div class="col-12">
+ <form [formGroup]="dynamicForm.formGroup">
+    <div viewMode="basic" [rxwebDynamicForm]="dynamicForm" [uiBindings]="uiBindings">
+    </div>
+    <button [disabled]="!dynamicForm.formGroup.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+  </div>
+</div>
